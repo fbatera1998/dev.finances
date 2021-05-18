@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <title>Primeiro JS</title>
+</head>
+
+<body>
+  <div class="teste">
+    <button onclick="Soma()">+ 1</button>
+    <p><span id="var">0</span></p>
+    <button onclick="Subtrai()"> -1</button>
+    <p id="alerta"></p>
+  </div>
+</body>
+<script>
+  console.log('clique aqui')
+  function Soma(){
+    var a = document.getElementById('var').innerHTML;
+    var b = 0;
+    a++;
+    if(a >11 ){
+      document.getElementById('alerta').innerHTML= "Numero maior que o esperado";
+    } else if(a == 10){
+      document.getElementById('var').innerHTML = 10
+      document.getElementById('alerta').innerHTML= "numero maior que o esperado";
+    }
+    else{
+      document.getElementById('var').innerHTML = a
+      document.getElementById('alerta').innerHTML= ""
+    }
+    console.log(a)
+  }
+  function Subtrai(){
+    var a = document.getElementById('var').innerHTML;
+    a--;
+    if(a <= -11){
+      document.getElementById('alerta').innerHTML= "Numero maior que o esperado "
+    }else if(a == -10){
+      document.getElementById('var').innerHTML = -10
+      document.getElementById('alerta').innerHTML= "numero maior que o esperado";
+    }else{
+      document.getElementById('var').innerHTML = a
+      document.getElementById('alerta').innerHTML= ""
+    }
+    
+    console.log(a)
+  }
+  
+</script>
+
+</html>
